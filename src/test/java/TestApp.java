@@ -7,6 +7,12 @@ public class TestApp {
     void testMain() {
 
     }
+
+    @Test
+    void testFindInt() {
+
+    }
+
     @Test
     void testIterateLoop() {
         App.iterateLoop(1, 3);

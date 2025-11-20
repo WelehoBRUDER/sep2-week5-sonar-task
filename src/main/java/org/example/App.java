@@ -11,13 +11,16 @@ public class App {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
        App.log.info("Hello and welcome!");
-
-        Scanner sc = new Scanner(System.in);
-
-        App.log.info("How many loops would you like?");
-        int loops = sc.nextInt();
+        int loops = App.findInt();
 
         App.iterateLoop(1, loops);
+    }
+
+    public static int findInt() {
+        Scanner sc = new Scanner(System.in);
+        App.log.info("How many numbers to display in the loops?");
+        int loops = sc.nextInt();
+        return Math.max(loops, 0);
     }
 
     public static void iterateLoop(int start, int end) {
